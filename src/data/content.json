@@ -1,0 +1,146 @@
+{
+  "navigation": {
+    "logo": { "src": "/images/logo.svg", "alt": "Grafterr" },
+    "links": [
+      { "label": "Products", "href": "#products" },
+      { "label": "Solutions", "href": "#solutions" }
+    ],
+    "cta": { "label": "Get Started" }
+  },
+  "hero": {
+    "headlinePrefix": "The leading",
+    "headlineGradient": "technology provider",
+    "headlineSuffix": "for restaurants",
+    "subheadline": "Streamline operations, delight customers, and boost revenue with Grafterr's all-in-one restaurant management platform. From POS to kitchen display, we power your entire workflow.",
+    "cta": { "label": "Start free trial" },
+    "shapes": [
+      { "id": "teal-circle", "type": "circle", "color": "#2DD4BF" },
+      { "id": "coral-rect", "type": "rectangle", "color": "#F97316" }
+    ]
+  },
+  "featuresSection": {
+    "title": "Everything you need to",
+    "titleAccent": "grow your business",
+    "subtitle": "Powerful, intuitive tools designed specifically for modern restaurants. Manage orders, streamline kitchen operations, and empower your customers — all from one unified platform.",
+    "products": [
+      {
+        "id": "pos",
+        "name": "Point of Sale",
+        "description": "Lightning-fast order processing with an intuitive interface your staff will love. Accept payments, manage tables, and track sales in real time.",
+        "image": "/images/pos.png",
+        "tag": "Core"
+      },
+      {
+        "id": "self-service",
+        "name": "Self-service Kiosk",
+        "description": "Let customers browse menus, customize orders, and pay — all on their own. Reduce wait times and increase average order value by up to 30%.",
+        "image": "/images/self-service.png",
+        "tag": "Kiosk"
+      },
+      {
+        "id": "kitchen",
+        "name": "Kitchen Management",
+        "description": "Real-time order routing, priority tracking, and prep-time analytics. Keep your kitchen running like clockwork during peak hours.",
+        "image": "/images/kitchen.png",
+        "tag": "KDS"
+      }
+    ]
+  },
+  "solutionsSection": {
+    "title": "Built for every",
+    "titleAccent": "type of restaurant",
+    "subtitle": "Whether you run a cozy café or a multi-location franchise, Grafterr adapts to your unique workflow.",
+    "solutions": [
+      {
+        "id": "quick-service",
+        "icon": "⚡",
+        "name": "Quick Service",
+        "description": "Speed-optimized workflows for fast-casual and takeaway restaurants. Process orders in seconds, not minutes."
+      },
+      {
+        "id": "full-service",
+        "icon": "🍽️",
+        "name": "Full Service Dining",
+        "description": "Table management, course sequencing, and split billing — everything your front-of-house team needs to deliver exceptional service."
+      },
+      {
+        "id": "multi-location",
+        "icon": "📊",
+        "name": "Multi-Location",
+        "description": "Centralized menu management, consolidated reporting, and real-time performance tracking across all your locations."
+      },
+      {
+        "id": "cloud-kitchen",
+        "icon": "☁️",
+        "name": "Cloud Kitchens",
+        "description": "Manage multiple virtual brands from one kitchen. Integrated delivery platform routing and order aggregation."
+      }
+    ]
+  },
+  "ctaSection": {
+    "headline": "Ready to transform your restaurant?",
+    "subheadline": "Join thousands of restaurants already using Grafterr to streamline operations and delight customers.",
+    "cta": { "label": "Start your free trial" },
+    "stats": [
+      { "value": "10,000+", "label": "Restaurants" },
+      { "value": "99.9%", "label": "Uptime" },
+      { "value": "50M+", "label": "Orders processed" }
+    ]
+  },
+  "footer": {
+    "brand": "Grafterr",
+    "tagline": "The modern restaurant technology platform.",
+    "columns": [
+      {
+        "title": "Product",
+        "links": [
+          { "label": "Point of Sale", "href": "#products" },
+          { "label": "Self-service Kiosk", "href": "#products" },
+          { "label": "Kitchen Display", "href": "#products" },
+          { "label": "Pricing", "href": "#pricing" }
+        ]
+      },
+      {
+        "title": "Solutions",
+        "links": [
+          { "label": "Quick Service", "href": "#solutions" },
+          { "label": "Full Service", "href": "#solutions" },
+          { "label": "Multi-Location", "href": "#solutions" },
+          { "label": "Cloud Kitchens", "href": "#solutions" }
+        ]
+      },
+      {
+        "title": "Company",
+        "links": [
+          { "label": "About Us", "href": "#about" },
+          { "label": "Careers", "href": "#careers" },
+          { "label": "Blog", "href": "#blog" },
+          { "label": "Contact", "href": "#cta" }
+        ]
+      }
+    ],
+    "copyright": "© 2026 Grafterr. All rights reserved.",
+    "bottomLinks": [
+      { "label": "Privacy Policy", "href": "#privacy" },
+      { "label": "Terms of Service", "href": "#terms" },
+      { "label": "Cookie Policy", "href": "#cookies" }
+    ]
+  },
+  "modal": {
+    "title": "Start your free trial",
+    "subtitle": "No credit card required. Get full access for 14 days.",
+    "fields": [
+      { "id": "name", "label": "Full Name", "type": "text", "placeholder": "John Doe" },
+      { "id": "email", "label": "Email Address", "type": "email", "placeholder": "john@restaurant.com" },
+      { "id": "restaurant", "label": "Restaurant Name", "type": "text", "placeholder": "My Restaurant" }
+    ],
+    "submitLabel": "Create free account",
+    "successMessage": "🎉 Welcome to Grafterr! Check your email to get started.",
+    "disclaimer": "By signing up, you agree to our Terms of Service and Privacy Policy."
+  },
+  "carousel": {
+    "itemsPerView": { "mobile": 1, "tablet": 2, "desktop": 3 },
+    "showArrows": true,
+    "transitionMs": 300
+  }
+}

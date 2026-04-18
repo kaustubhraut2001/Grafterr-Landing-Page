@@ -1,0 +1,23 @@
+@keyframes float {
+  0%, 100% {
+    transform: translateY(0px);
+  }
+  50% {
+    transform: translateY(-20px);
+  }
+}
+
+.shape {
+  position: absolute;
+  animation: float 4s ease-in-out infinite;
+  pointer-events: none;
+  z-index: 0;
+}
+
+.circle {
+  border-radius: 50%;
+}
+
+.rectangle {
+  border-radius: var(--border-radius-md);
+}

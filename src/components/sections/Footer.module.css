@@ -1,0 +1,123 @@
+.footer {
+  background: #0f172a;
+  color: #94a3b8;
+  padding: var(--spacing-4xl) var(--spacing-lg) var(--spacing-xl);
+}
+
+.container {
+  max-width: var(--container-max-width);
+  margin: 0 auto;
+}
+
+.topRow {
+  display: grid;
+  grid-template-columns: 1.5fr repeat(3, 1fr);
+  gap: var(--spacing-3xl);
+  margin-bottom: var(--spacing-3xl);
+}
+
+.brandCol {
+  display: flex;
+  flex-direction: column;
+  gap: var(--spacing-md);
+}
+
+.brandName {
+  font-size: var(--font-size-2xl);
+  font-weight: var(--font-weight-extrabold);
+  background: var(--gradient-primary);
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.tagline {
+  font-size: var(--font-size-sm);
+  line-height: var(--line-height-relaxed);
+  color: #64748b;
+}
+
+.columnTitle {
+  font-size: var(--font-size-sm);
+  font-weight: var(--font-weight-semibold);
+  color: #e2e8f0;
+  margin-bottom: var(--spacing-md);
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+}
+
+.columnLinks {
+  display: flex;
+  flex-direction: column;
+  gap: var(--spacing-sm);
+}
+
+.columnLink {
+  font-size: var(--font-size-sm);
+  color: #64748b;
+  transition: color var(--transition-fast);
+  cursor: pointer;
+}
+
+.columnLink:hover {
+  color: #e2e8f0;
+}
+
+.divider {
+  border: none;
+  height: 1px;
+  background: #1e293b;
+  margin-bottom: var(--spacing-lg);
+}
+
+.bottomRow {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.copyright {
+  font-size: var(--font-size-xs);
+  color: #475569;
+}
+
+.bottomLinks {
+  display: flex;
+  gap: var(--spacing-lg);
+}
+
+.bottomLink {
+  font-size: var(--font-size-xs);
+  color: #475569;
+  transition: color var(--transition-fast);
+  cursor: pointer;
+}
+
+.bottomLink:hover {
+  color: #94a3b8;
+}
+
+/* Responsive */
+@media (max-width: 767px) {
+  .topRow {
+    grid-template-columns: 1fr;
+    gap: var(--spacing-xl);
+  }
+
+  .bottomRow {
+    flex-direction: column;
+    gap: var(--spacing-md);
+    text-align: center;
+  }
+
+  .bottomLinks {
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+}
+
+@media (min-width: 768px) and (max-width: 1023px) {
+  .topRow {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
