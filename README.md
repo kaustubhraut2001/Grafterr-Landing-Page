@@ -2,99 +2,88 @@
 
 A pixel-perfect, fully responsive React landing page for **Grafterr** — a modern restaurant technology platform.
 
-## Screenshots
+## 🔗 Links
+- **Live Deployed URL**: https://grafterr-landing-page.netlify.app/
 
-### Hero Section
-Gradient hero with animated floating shapes, smooth-scroll navigation, and CTA buttons.
+## 🛠️ Chosen Stack
+- **Framework**: React 18 (Functional Components & Hooks)
+- **Build Tool**: Vite (for lightning-fast development and optimized builds)
+- **Styling**: Vanilla CSS with **CSS Modules** (zero frameworks used for pixel-perfection)
+- **Data Management**: Data-driven architecture using a central `content.json`
+- **Quality**: PropTypes for type safety and clean component interfaces
 
-![Hero Section](screenshots/hero-section.png)
-
----
-
-### Features Section
-Product carousel with 3 cards (POS, Self-service Kiosk, Kitchen Management) featuring gradient tag badges, hover effects, and responsive layout.
-
-![Features Section](screenshots/features-section.png)
-
----
-
-### Solutions Section
-2×2 grid showcasing restaurant types — Quick Service, Full Service Dining, Multi-Location, and Cloud Kitchens.
-
-![Solutions Section](screenshots/solutions-section.png)
-
----
-
-### CTA Section & Footer
-Stats bar (10,000+ Restaurants, 99.9% Uptime, 50M+ Orders), gradient CTA button, and dark-themed footer with multi-column navigation.
-
-![CTA & Footer](screenshots/cta-footer.png)
-
----
-
-### Signup Modal
-Fully functional modal with form validation, loading state, and animated success confirmation.
-
-| Signup Form | Success State |
-|---|---|
-| ![Modal Form](screenshots/modal-signup.png) | ![Modal Success](screenshots/modal-success.png) |
-
----
-
-## Tech Stack
-
-| Technology | Purpose |
-|---|---|
-| **React 18** | UI framework — functional components + hooks only |
-| **Vite** | Build tool and dev server for fast HMR |
-| **CSS Modules** | Scoped, modular styling — no CSS frameworks |
-| **PropTypes** | Runtime type checking for all components |
-
-## Architecture
-
-- **Data-driven UI**: All visible text comes from `src/data/content.json` via a simulated API layer (`src/services/api.js`). Zero hardcoded text in JSX.
-- **Custom hooks**: `useContent` manages parallel data fetching with loading/error/retry states. `useCarousel` handles carousel navigation with touch swipe support.
-- **Skeleton loading**: Every section renders animated shimmer placeholders while data loads.
-- **Error resilience**: The API simulates ~15% failure rate. The app catches errors and offers a retry button.
-- **Responsive design**: Mobile-first with breakpoints at 768px (tablet) and 1024px (desktop). Carousel adapts items-per-view automatically.
-
-## Setup
+## 🚀 Setup Instructions
 
 ```bash
-# Install dependencies
+# 1. Clone the repository
+git clone https://github.com/kaustubhraut2001/Grafterr-Landing-Page.git
+
+# 2. Navigate to project directory
+cd Grafterr-Landing-Page
+
+# 3. Install dependencies
 npm install
 
-# Start development server
+# 4. Run development server
 npm run dev
 ```
 
-The app will be available at `http://localhost:5173`.
+The application will be available at `http://localhost:5173`.
 
-## Project Structure
+## 🧠 Approach & Methodology
+
+1.  **Architecture**: Followed a strictly modular approach. UI components are separated into `ui/` atoms (Input, Button, Card) and `sections/` organisms (Hero, Features, Solutions).
+2.  **Data-Driven**: All text content is hosted in `src/data/content.json`. This allows for content updates without touching the JSX, simulating a CMS-ready environment.
+3.  **Simulated API**: Implemented a realistic API layer in `src/services/api.js` that mimics network latency and handles random failure states (15% rate) to test the robustness of the UI.
+4.  **Custom Hooks**:
+    - `useContent`: Orchestrates parallel data fetching and state management.
+    - `useCarousel`: Encapsulates complex carousel logic including touch gestures and boundary checks.
+5.  **Aesthetics**: Focused on premium design with:
+    - Custom CSS animations for floating shapes.
+    - Shimmer skeletons for improved perceived performance.
+    - Glassmorphism effects and consistent brand gradients.
+
+## 📸 Screenshots
+
+### Hero Section
+![Hero Section](screenshots/hero-section.png)
+
+### Features & Carousel
+![Features Section](screenshots/features-section.png)
+
+### Solutions Grid
+![Solutions Section](screenshots/solutions-section.png)
+
+### Interactive Modal (Signup & Success)
+| Signup Form | Success Message |
+|---|---|
+| ![Modal Form](screenshots/modal-signup.png) | ![Modal Success](screenshots/modal-success.png) |
+
+## ⚖️ Implementation vs Figma Comparison
+
+| Feature | Implementation Detail |
+|---|---|
+| **Typography** | Inter (400-800) matched from design |
+| **Colors** | Gradient `#3B82F6` to `#F97316` applied consistently |
+| **Grid** | Responsive 1/2/3 column layout based on device breakpoints |
+| **Interactions** | Smooth scrolling, hover lift animations, and touch-ready carousel |
+
+> _[Insert Side-by-Side Comparison Image Here]_
+
+## 📁 Project Structure
 
 ```
 grafterr-landing/
-├── public/images/              # Static assets (logo, product images)
-├── screenshots/                # README screenshots
+├── public/images/              # Brand assets & generated product images
+├── screenshots/                # Documentation screenshots
 ├── src/
 │   ├── components/
-│   │   ├── ui/                 # Reusable UI (GradientText, ProductCard, Carousel, Modal, etc.)
-│   │   └── sections/           # Page sections (Hero, Features, Solutions, CTA, Footer)
-│   ├── hooks/                  # Custom hooks (useContent, useCarousel)
-│   ├── services/               # API layer with simulated network delay
-│   ├── data/                   # Content JSON — single source of truth for all text
-│   ├── styles/                 # Global styles and CSS custom properties
-│   ├── App.jsx                 # Root component with state orchestration
+│   │   ├── ui/                 # Reusable atomic components
+│   │   └── sections/           # High-level page sections
+│   ├── hooks/                  # Logic-only reusable hooks
+│   ├── services/               # API & Network layer
+│   ├── data/                   # content.json (Single Source of Truth)
+│   ├── styles/                 # Global variables & Design tokens
+│   ├── App.jsx                 # state orchestration
 │   └── main.jsx                # Entry point
 ```
-
-## Key Features
-
-- ✅ **Smooth scroll navigation** — Products & Solutions links scroll to their sections
-- ✅ **Working signup modal** — Form with validation, loading state, and success animation
-- ✅ **Carousel with touch support** — Swipe gestures on mobile, arrow buttons on desktop
-- ✅ **Loading skeletons** — Shimmer animation placeholders for every section
-- ✅ **Error handling** — Retry button on API failures
-- ✅ **Responsive** — Adapts from 375px mobile to 1440px desktop
-- ✅ **Animated floating shapes** — 4s ease-in-out infinite bob animation
-- ✅ **Fade-in transitions** — Content animates in on load
